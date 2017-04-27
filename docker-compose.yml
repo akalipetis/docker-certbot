@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+  certbot:
+    image: akalipetis/certbot:latest
+    build: ./
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /tmp:/tmp
+      - /var/log/letsencrypt:/var/log/letsencrypt
